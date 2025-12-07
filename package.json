@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "cross-env NODE_OPTIONS='--openssl-legacy-provider' vite build",
+    "build": "node --loader ts-node/esm ./node_modules/vite/bin/vite.js build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "vite": "^5.0.0",
-    "@vitejs/plugin-react": "^4.0.0",
-    "cross-env": "^7.0.3"
+    "@vitejs/plugin-react": "^4.0.0"
   }
 }
