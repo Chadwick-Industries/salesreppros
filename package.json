@@ -5,16 +5,47 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node ./node_modules/vite/bin/vite.js build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.87.0",
+    "autoprefixer": "^10.4.0",
+    "axios": "^1.5.0",
+    "clsx": "^2.0.0",
+    "postcss": "^8.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@supabase/supabase-js": "^2.39.0"
+    "react-router-dom": "^6.30.2",
+    "resend": "^6.6.0",
+    "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
-    "vite": "^5.0.0",
-    "@vitejs/plugin-react": "^4.0.0"
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^5.0.0"
+  },
+  "structure": {
+    "src": {
+      "pages": {
+        "LandingPage.jsx": "Home landing page with call-to-action buttons",
+        "Directory.jsx": "National salesrep directory with industry filters",
+        "RepProfile.jsx": "Individual rep profile page with contact and referral info",
+        "Login.jsx": "Rep login page with Supabase auth",
+        "Register.jsx": "Rep registration page"
+      },
+      "components": {
+        "Header.jsx": "Navigation header with links to pages",
+        "Footer.jsx": "Site footer with contact info",
+        "RepCard.jsx": "Component to display a single rep in the directory",
+        "SearchBar.jsx": "Search and filter reps by industry/location",
+        "ReferralBadge.jsx": "Displays referral info and link"
+      },
+      "services": {
+        "supabaseClient.js": "Supabase client initialization",
+        "api.js": "Axios API calls wrapper for fetching rep data"
+      },
+      "App.jsx": "Root component with Router setup",
+      "index.jsx": "ReactDOM render entry point"
+    }
   }
 }
