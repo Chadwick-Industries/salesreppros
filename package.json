@@ -4,10 +4,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "node ./node_modules/vite/bin/vite.js build",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "echo \"Skipping default build\"",
+  "vercel-build": "node ./node_modules/vite/bin/vite.js build",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
     "react": "^18.3.1",
